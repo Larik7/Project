@@ -1,0 +1,117 @@
+.container-header {
+    display: flex;
+    align-items: center;
+}
+
+.header-nav {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        margin-left: 88px;
+        margin-right: auto;
+    }
+        
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+        margin-right: auto;
+    }
+
+}
+
+.site-nav {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.current::after {
+    @media screen and (min-width: 768px) {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4px;
+        margin-top: 29px;
+        border-radius: 4px;
+        background: var(--accent-txt-cl);
+    }
+}
+
+.site-nav .link.current {
+    color: var(--accent-txt-cl);
+}
+
+.contacts-nav {
+display: none;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 21px;
+        padding-bottom: 21px;
+        display: flex;
+        align-items:flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.contacts-nav .link {
+    color: var(--second-txt-cl);
+}
+
+.header-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icons {
+    @media screen and (min-width: 768px) {
+        fill: currentColor;
+        margin-right: 10px;
+    }
+}
+
+.contact-link:not(:last-child) {
+    @media screen and (min-width: 768px) {
+        margin-bottom: 10px;
+    }
+        
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0px;
+        margin-right: 50px;
+    }
+}
+
+.page-header {
+    border-bottom: 1px solid #ececec;
+    background-color: var(--main-bg-cl);
+}
+
+.page-header .link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    transition: color var(--anim-slow);
+}
+
+.page-header .link:hover,
+.page-header .link:focus {
+    color: var(--accent-txt-cl);
+}
